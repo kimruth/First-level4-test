@@ -1,0 +1,34 @@
+CLASSES = {
+    ID: PK INT UNIQUE,
+    name: varchar(50),
+    startDate: varchar(150),
+    endDate: varchar(150)
+};
+
+COURSES = {
+    ID: PK INT UNIQUE,
+    name: varchar(50)
+};
+
+STATUTS = {
+    ID: PK INT UNIQUE,
+    name: varchar(50)
+};
+
+SCHEDULE = {
+    ID: PK INT UNIQUE,
+    date: varchar(50),
+    time: varchar(50),
+    course_id: INT FOREIGN KEY
+};
+
+USERS = {
+    ID: PK INT UNIQUE,
+    fName: varchar(50),
+    fName: varchar(50),
+    dateOfBirth: varchar(50),
+    email: varchar(150) UNIQUE,
+    statut_id: INT FOREIGN KEY,
+    schedule_id: INT FOREIGN KEY,
+    class_id: INT FOREIGN KEY
+};
